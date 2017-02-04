@@ -1,0 +1,23 @@
+creative.txt
+
+Danny Weiner - 435140
+Emily Coco - 429297
+
+http://ec2-52-33-218-205.us-west-2.compute.amazonaws.com/~ecoco/module5/calendar.html
+http://ec2-54-213-147-183.us-west-2.compute.amazonaws.com/~dnweiner/module5/calendar.html
+
+For the creative portion, we did added a number of features, varying in size, including:
+
+-when adding an event, changing the date field highlights the appropriate square on the grid, assuming you're viewing the month in question
+-when adding an event, you can specify it to occur for 1-4 weeks (exclusively within the current month) - these events display as crimson
+-check the box in each event to flag it (shows up as lightgreen - or darkgreen, if weekly)
+-logout button and add event form do not appear until a user is logged in
+-refresh button is generated in the first empty cell of the grid, wherever that may be
+-user can jump to any month in the current year by clicking on it in the dropdown, and any CE year by entering one in the neighboring field
+-autofocus on username field
+-currently logged-in username displays at top
+-can add/modify event descriptions, which displays via a mouseover text on the event within the calendar
+
+TA Login instructions:
+If you want to login as a user that already exists on either instance, login with username "test1" and password "test1".
+If you want to login as your own user, create your own username by entering a name and password and clicking register.
