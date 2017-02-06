@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8"/>
+<title>Weather Widget</title>
+<style type="text/css">
+body{
+	width: 760px; /* how wide to make your web page */
+	background-color: teal; /* what color to make the background */
+	margin: 0 auto;
+	padding: 0;
+	font:12px/16px Verdana, sans-serif; /* default font */
+}
+div#main{
+	background-color: #FFF;
+	margin: 0;
+	padding: 10px;
+}
+.weather{
+    width: 200px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.weather-loc{
+    font-size: 18px;
+}
+
+.weather-temp{
+    float:left;
+}
+.weather-temp::before{
+    content: 'Currently ';
+}
+
+.weather-humidity{
+    float: right;
+}
+.weather-humidity::before{
+    content: 'Humidity: ';
+}
+.weather-humidity::after{
+    content: '%';
+}
+</style>
+
+<script type="text/javascript">
+	var fetchWeather = function() {
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.open("GET", "http://classes.engineering.wustl.edu/cse330/content/weather_json.php", true);
+		xmlHttp.addEventListener("load", ajaxCallback, false);
+		xmlHttp.send(null);
+
+		function ajaxCallback(event){
+			var jsonData = JSON.parse(event.target.responseText);
+			//alert(jsonData.location.city);
+			document.getElementsByClassName("weather-loc")[0].innerHTML = "<p><strong>" + jsonData.location.city + "</strong> " + jsonData.location.state + "</p>";
+			document.getElementsByClassName("weather-humidity")[0].textContent = jsonData.atmosphere.humidity;
+			document.getElementsByClassName("weather-temp")[0].textContent = jsonData.current.temp;
+			document.getElementsByClassName("weather-tomorrow")[0].src = "http://us.yimg.com/i/us/nws/weather/gr/" + jsonData.tomorrow.code + "ds.png";
+			document.getElementsByClassName("weather-tomorrow")[0].alt = "tomorrow";
+			document.getElementsByClassName("weather-dayaftertomorrow")[0].src = "http://us.yimg.com/i/us/nws/weather/gr/" + jsonData.dayafter.code + "ds.png";
+			document.getElementsByClassName("weather-dayaftertomorrow")[0].alt = "overmorrow";
+		}
+	}
+</script>
+
+
+</head>
+<body><div id="main">
+	<div class="weather" id="weatherWidget">
+	<div class="weather-loc"></div>
+	<div class="weather-humidity"></div>
+	<div class="weather-temp"></div>
+	<img class="weather-tomorrow" />
+	<img class="weather-dayaftertomorrow" />
+	</div>
+	<br>
+	<button id="btn">Refresh</button>
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", fetchWeather, false);
+	document.getElementById("btn").addEventListener("click", fetchWeather, false);
+</script>
+
+</body>
+</html>
