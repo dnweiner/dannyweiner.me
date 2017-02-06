@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8"/>
+<title>Calculator Interface</title>
+<style type="text/css">
+body{
+	width: 760px; /* how wide to make your web page */
+	background-color: teal; /* what color to make the background */
+	margin: 0 auto;
+	padding: 0;
+	font:12px/16px Verdana, sans-serif; /* default font */
+}
+div#main{
+	background-color: #FFF;
+	margin: 0;	
+	padding: 10px;
+}
+div#answerfield{
+	background-color: white;
+	color: green;
+	font: inherit;
+	width: 380px;
+	padding: inherit;
+	display: inline-block;
+}
+</style>
+
+<script type="text/javascript">
+		var calculate = function() {
+		var num1 = parseFloat(document.getElementById("num1").value);
+		var num2 = parseFloat(document.getElementById("num2").value);
+	
+		var opcodes = document.getElementsByName("opcode");
+		var opcode = null;
+	
+		for(var i=0; i < opcodes.length; ++i) {
+			if (opcodes[i].checked) {
+				opcode=opcodes[i].value;
+				//alert(opcode);
+				break;
+			}
+		}
+	  
+		var ans = null;
+				
+		switch (opcode) {
+			case "Addition": 
+				ans = num1 + num2;
+				break;
+			case "Subtraction":
+				ans = num1 - num2;
+				break;
+			case "Multiplication":
+				ans = num1 * num2;
+				break;
+			case "Division":
+				if (num2 == 0) {
+					ans = "ERROR";
+				} else { 
+					ans = num1 / num2;
+				}
+				break;
+			default:
+				ans = "TBD";
+				break;
+		}
+		
+		//alert(ans);
+		document.getElementById("answerfield").innerHTML = "<p>Answer: " + ans + "</p>";
+    }
+</script>
+
+
+</head>
+<body><div id="main">
+ 
+<p>Welcome to my JavaScript calculator!</p>
+<br>
+<form id="inputfield">
+	<strong>Choose an operation:</strong>
+	<br>
+		<input type="radio" name="opcode" value="Addition" id="add"/><label for="add">Addition</label>
+		<br>
+		<input type="radio" name="opcode" value="Subtraction" id="sub"/><label for="sub">Subtraction</label>
+		<br>
+		<input type="radio" name="opcode" value="Multiplication" id="mult"/><label for="mult">Multiplication</label>
+		<br>
+		<input type="radio" name="opcode" value="Division" id="div"/><label for="div">Division</label>
+		<br>
+	<label>Enter first number: <input type="number" step="any" id="num1"/></label>
+	<br>
+	<label>Enter second number: <input type="number" step="any" id="num2"/></label>
+	<br>
+	<input type="reset" value="Clear" id="rst"/>
+	<!--<input type="button" value="Disable Calculator"/>-->
+</form>
+<div id="answerfield">
+	
+</div>
+</div>
+
+<script>
+	var input1 = document.getElementById("num1");//
+	if(input1) {
+		input1.addEventListener("change", calculate, false);
+	} else {
+		input1.removeEventListener("change", calculate, false);
+	}
+	
+	var input2 = document.getElementById("num2")
+	if(input2) {
+		input2.addEventListener("change", calculate, false);
+	} else {
+		input2.removeEventListener("change", calculate, false);
+	}
+	
+	var input3 = document.getElementsByName("opcode");
+	for(var i=0; i < input3.length; ++i) {
+		if(input3[i]) {
+			input3[i].addEventListener("click", calculate, false);
+		} else {
+			input3[i].removeEventListener("click", calculate, false);
+		}
+	}
+	
+	var input4 = document.getElementById("rst");
+	if (input4) {
+        input4.addEventListener("click", calculate, false);
+    } else {
+		input4.removeEventListener("click", calculate, false);
+	}
+</script>
+
+
+</body>
+</html>
