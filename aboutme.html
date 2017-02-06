@@ -51,6 +51,13 @@
       footer {
         color: Thistle;
       }
+      .slider-size {
+        height: 400px; /* This is your slider height */
+       }
+       .carousel {
+          width:100%; 
+          margin:0 auto; /* center your carousel if other than 100% */ 
+       }
       .carousel-caption {
         color: LightCoral;
         font-size: large;
@@ -173,11 +180,11 @@
         </div>
 
         <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <a class="left carousel-control" href="#myCarousel" role="button" "javascript:void(0)" data-slide="prev" data-target="#carousel-example">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <a class="right carousel-control" href="#myCarousel" role="button" "javascript:void(0)" data-slide="next" data-target="#carousel-example">
           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
