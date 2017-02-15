@@ -32,7 +32,7 @@
         margin-left: 3px;
         margin-right: 3px;
       }
-      .s12, .s12 > div {
+      .s12, .card-panel {
         background-color: SteelBlue;
         color: MidnightBlue;
       }
@@ -42,8 +42,11 @@
       .s4 a {
         color: inherit;
       }
-      nav, footer > div {
-        color: Thistle;
+      nav, footer, .page-footer {
+        color: LightGrey;
+        background-color: LightSlateGrey;
+      }
+      .footer-copyright {
         background-color: DarkSlateGrey;
       }
     </style>
@@ -64,16 +67,16 @@
     </div>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="col s12">
-      <div class="container">
-      <div class="card-panel hoverable">
+    <div class="container">
+      <div class="col 12">
+        <div class="card-panel hoverable">
           <div class="row valign-wrapper">
             <div class="col s8 center-align">
               <h1>"Hello, World!"</h1>
               <p>Welcome! My name is Danny Weiner, and this is my personal website. Take a look around! I will be updating periodically, so stay tuned for bigger and better things.</p>
             </div>
             <div class="col s4">
-                <img class="circle responsive-img" src="../images/WEINER_headshot-edited.jpg" alt="Professional Headshot">
+              <img class="circle responsive-img" src="../images/WEINER_headshot-edited.jpg" alt="Professional Headshot">
             </div>
           </div>
         </div>
