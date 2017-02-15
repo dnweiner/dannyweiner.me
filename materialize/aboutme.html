@@ -40,12 +40,15 @@
         color: MidnightBlue;
       }
       nav, footer.page-footer {
-        color: DarkSlateGrey;
+        /*color: DarkSlateGrey;*/
         background-color: LightSlateGrey;
       }
       .caption {
         color: PowderBlue;
         font-size: large;
+      }
+      .caption h2 {
+        font-weight: bold;
       }
       /*.highlightme {
         background-color: LightSlateGray;
@@ -53,9 +56,6 @@
       /*#debate {
         color:
       }*/
-      .caption h2 {
-        font-weight: bold;
-      }
       /*.caption p {
         font-style: italic;
         color: inherit;
@@ -105,9 +105,9 @@
             <img src="../images/danny+dogs.JPG" alt="Me and my dogs">
             <div class="caption right-align">
               <h2>Dog Person</h2>
-              
+
               <!-- Modal Trigger -->
-              <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
+              <a class="waves-effect waves-light btn" href="#modal1">Learn more</a>
 
               <!-- Modal Structure -->
               <div id="modal1" class="modal">
@@ -175,6 +175,8 @@
     <script type="text/javascript">
       $(document).ready(function(){
         $('.slider').slider();
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
       })
     </script>
 
