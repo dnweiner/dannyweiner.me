@@ -98,74 +98,62 @@
 
     <br>
 
-    <div class="carousel carousel-slider center" data-indicators="true">
-      <a class="carousel-item" href="#one!"><img src="/images/danny+dogs.JPG">Dog Person</a>
-      <a class="carousel-item" href="#two!"><img src="/images/debateNBC.JPG">Politically Engaged</a>
-      <a class="carousel-item" href="#three!"><img src="/images/BryanCranston.jpg">Proud Nerd</a>
-      <a class="carousel-item" href="#four!"><img src="/images/MU.JPG">Lifelong Learner</a>
-      <a class="carousel-item" href="#five!"><img src="/images/gavel.JPG">Student Leader</a>
-
-      <div class="divider"></div>
-
-      </div>
-
-
-    <!-- <div class="container">
+    <div class="container">
       <div class="slider">
         <ul class="slides">
           <li>
             <img src="../images/danny+dogs.JPG" alt="Me and my dogs">
             <div class="caption right-align">
               <h2>Dog Person</h2>
-
-              <!-- Modal Trigger -->
-              <!-- <a class="waves-effect waves-light btn" href="#modal1">Learn more</a> -->
-
-              <!-- Modal Structure -->
-              <!-- <div id="modal1" class="modal">
-                <div class="modal-content">
-                  <h4>Dog Person</h4>
-                  <p>Meet Perry and Andy: my family's two Portuguese Water Dogs and the most important parts of my life!</p>
-                </div>
-                <div class="modal-footer">
-                  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-                </div>
-              </div> -->
-              <!-- <p><span class="highlightme">Meet Perry and Andy: my family's two Portuguese Water Dogs and the most important parts of my life!</span></p>
+              <!-- <p><span class="highlightme">Meet Perry and Andy: my family's two Portuguese Water Dogs and the most important parts of my life!</span></p> -->
             </div>
           </li>
           <li>
             <img src="../images/debateNBC.JPG" alt="Wash U Debate 2016">
             <div class="caption right-align" id="debate">
               <h2>Politically Engaged</h2>
-              <!-- <p><span class="highlightme">Wash U hosted its fifth presidential debate this year and I was fortunate enough to be a part of the action.</span></p>
+              <!-- <p><span class="highlightme">Wash U hosted its fifth presidential debate this year and I was fortunate enough to be a part of the action.</span></p> -->
             </div>
           </li>
           <li>
             <img src="../images/BryanCranston.jpg" alt="Meeting Bryan Cranston">
             <div class="caption right-align">
               <h2>Proud Nerd</h2>
-              <!-- <p><span class="highlightme">I was lucky (and patient) enough to meet Bryan Cranston after the final Broadway performance of <span id="alltheway">All the Way</span>!</span></p>
+              <!-- <p><span class="highlightme">I was lucky (and patient) enough to meet Bryan Cranston after the final Broadway performance of <span id="alltheway">All the Way</span>!</span></p> -->
             </div>
           </li>
           <li>
             <img src="../images/MU.JPG" alt="Monsters University Display">
             <div class="caption right-align" id="MU">
               <h2>Lifelong Learner</h2>
-              <!-- <p><span class="highlightme">I decided to enroll as an exchange student at Monsters University after their info session in London's Harrods.</span></p>
+              <!-- <p><span class="highlightme">I decided to enroll as an exchange student at Monsters University after their info session in London's Harrods.</span></p> -->
             </div>
           </li>
           <li>
             <img src="../images/gavel.JPG" alt="Introducing keynote speaker">
             <div class="caption right-align">
               <h2>Student Leader</h2>
-              <!-- <p><span class="highlightme">I had the privilege of introducing a Model UN conference keynote speaker after arranging their participation. Over 300 high school students were in attendance.</span></p>
+              <!-- <p><span class="highlightme">I had the privilege of introducing a Model UN conference keynote speaker after arranging their participation. Over 300 high school students were in attendance.</span></p> -->
             </div>
           </li>
         </ul>
       </div>
       <div class="divider"></div>
-    </div> -->
+    </div>
+
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn" href="#modal1">Learn more</a>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Dog Person</h4>
+        <p>Meet Perry and Andy: my family's two Portuguese Water Dogs and the most important parts of my life!</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
 
     <div class="container">
       <h1>"Why don't you tell us a bit about yourself?"</h1>
@@ -186,10 +174,10 @@
 
     <script type="text/javascript">
       $(document).ready(function(){
-        // $('.slider').slider();
-        $('.carousel.carousel-slider').carousel({fullWidth: true});
+        $('.slider').slider();
+        //$('.carousel.carousel-slider').carousel({fullWidth: true});
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-        // $('.modal').modal();
+        $('.modal').modal();
       })
     </script>
 
