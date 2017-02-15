@@ -49,13 +49,8 @@
       }
       .caption h2 {
         font-weight: bold;
-      }
-      /*.highlightme {
         background-color: LightSlateGray;
-      }*/
-      /*#debate {
-        color:
-      }*/
+      }
       /*.caption p {
         font-style: italic;
         color: inherit;
@@ -110,7 +105,7 @@
           </li>
           <li>
             <img src="../images/debateNBC.JPG" alt="Wash U Debate 2016">
-            <div class="caption right-align" id="debate">
+            <div class="caption right-align">
               <h2>Politically Engaged</h2>
               <!-- <p><span class="highlightme">Wash U hosted its fifth presidential debate this year and I was fortunate enough to be a part of the action.</span></p> -->
             </div>
@@ -124,7 +119,7 @@
           </li>
           <li>
             <img src="../images/MU.JPG" alt="Monsters University Display">
-            <div class="caption right-align" id="MU">
+            <div class="caption right-align">
               <h2>Lifelong Learner</h2>
               <!-- <p><span class="highlightme">I decided to enroll as an exchange student at Monsters University after their info session in London's Harrods.</span></p> -->
             </div>
@@ -174,6 +169,7 @@
 
     <script type="text/javascript">
       $(document).ready(function(){
+        $(".button-collapse").sideNav();
         $('.slider').slider();
         //$('.carousel.carousel-slider').carousel({fullWidth: true});
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
