@@ -90,31 +90,31 @@
       <div class="slider">
         <ul class="slides">
           <li>
-            <img data-caption="Meet Perry and Andy: my family's two Portuguese Water Dogs and the most important parts of my life!" src="../images/danny+dogs.JPG" alt="Me and my dogs">
+            <img class="materialboxed" data-caption="Meet Perry and Andy: my family's two Portuguese Water Dogs and the most important parts of my life!" src="../images/danny+dogs.JPG" alt="Me and my dogs">
             <div class="caption right-align">
               <h2><span class="highlightme">Dog Person</span></h2>
             </div>
           </li>
           <li>
-            <img data-caption="Wash U hosted its fifth presidential debate this year and I was fortunate enough to be a part of the action" src="../images/debateNBC.JPG" alt="Wash U Debate 2016">
+            <img class="materialboxed" data-caption="Wash U hosted its fifth presidential debate this year and I was fortunate enough to be a part of the action" src="../images/debateNBC.JPG" alt="Wash U Debate 2016">
             <div class="caption right-align">
               <h2><span class="highlightme">Politically Engaged</span></h2>
             </div>
           </li>
           <li>
-            <img data-caption="I was lucky (and patient) enough to meet Bryan Cranston afterthe final Broadway performance of 'All the Way'!" src="../images/BryanCranston.jpg" alt="Meeting Bryan Cranston">
+            <img class="materialboxed" data-caption="I was lucky (and patient) enough to meet Bryan Cranston afterthe final Broadway performance of 'All the Way'!" src="../images/BryanCranston.jpg" alt="Meeting Bryan Cranston">
             <div class="caption right-align">
               <h2><span class="highlightme">Proud Nerd</span></h2>
             </div>
           </li>
           <li>
-            <img data-caption="I decided to enroll as an exchange student at Monsters University after their info session in London's Harrods." src="../images/MU.JPG" alt="Monsters University Display">
+            <img class="materialboxed" data-caption="I decided to enroll as an exchange student at Monsters University after their info session in London's Harrods." src="../images/MU.JPG" alt="Monsters University Display">
             <div class="caption right-align">
               <h2><span class="highlightme">Lifelong Learner</span></h2>
             </div>
           </li>
           <li>
-            <img data-caption="I had the privilege of introducing a Model UN conference keynote speaker after arranging their participation. Over 300 high school students were in attendance." src="../images/gavel.JPG" alt="Introducing keynote speaker">
+            <img class="materialboxed" data-caption="I had the privilege of introducing a Model UN conference keynote speaker after arranging their participation. Over 300 high school students were in attendance." src="../images/gavel.JPG" alt="Introducing keynote speaker">
             <div class="caption right-align">
               <h2><span class="highlightme">Student Leader</span></h2>
             </div>
@@ -146,6 +146,9 @@
       $(document).ready(function(){
         $(".button-collapse").sideNav();
         $('.slider').slider();
+        $(document).ready(function(){
+          $('.materialboxed').materialbox();
+        });
         //$('.carousel.carousel-slider').carousel({fullWidth: true});
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
         $('.modal').modal();
