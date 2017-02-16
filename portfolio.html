@@ -11,14 +11,11 @@
     <title>Portfolio - dannyweiner.me</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -28,73 +25,62 @@
     <![endif]-->
     <style>
       body {
-        padding-top: 60px;
         background-color: CadetBlue;
-      }
-      @media (max-width: 979px) {
-        body {
-          padding-top: 0px;
-        }
       }
       .nav li {
         margin-left: 3px;
         margin-right: 3px;
       }
-      .container h1, .container h2, .container > p, .panel-body {
+      .container h1, .container h2, .container > p, .card-title {
         color: PowderBlue;
       }
       #head, #head h1 {
         background-color: SteelBlue;
         color: MidnightBlue;
       }
-      footer {
-        color: Thistle;
+      nav, footer.page-footer {
+        color: DarkSlateGrey;
+        background-color: LightSlateGrey;
       }
       strong {
         font-size: large;
       }
-      .list-group a {
+      .collapsible-header {
         color: MidnightBlue;
+        background-color: LightSlateGrey;
       }
-      .panel, .panel-default, .panel-body, .list-group a {
-        background-color: LightSlateGray;
+      .collapsible-body, .collapsible-body span {
+        color: MidnightBlue;
+        background-color: LightGrey;
+      }
+      .card {
+        background-color: LightSlateGrey;
       }
     </style>
   </head>
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <ul class="nav navbar-nav">
-            <li><a class="navbar-brand" href=".">Home</a><li>
-            <li><a class="navbar-brand" href="/aboutme.html">About Me</a></li>
-            <li class="active"><a class="navbar-brand" href="/portfolio.html">Portfolio</a></li>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="left hide-on-med-and-down">
+            <li><a href=".">Home</a><li>
+            <li><a href="/materialize/aboutme.html">About Me</a></li>
+            <li class="active"><a href="/materialize/portfolio.html">Portfolio</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile">
+            <li><a href=".">Home</a><li>
+            <li><a href="/materialize/aboutme.html">About Me</a></li>
+            <li class="active"><a href="/materialize/portfolio.html">Portfolio</a></li>
           </ul>
         </div>
-        <!--<div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div> -->
-        <!--/.navbar-collapse -->
-      </div>
-    </nav>
+      </nav>
+    </div>
 
-    <div class="container-fluid text-center" id="head">
+
+    <div class="container center-align" id="head">
       <hr>
 
       <h1>Portfolio</h1>
@@ -102,91 +88,219 @@
       <hr>
     </div>
 
-    <div class="container text-center">
+    <div class="container center-align">
       <h2>Technical Projects</h2>
       <p>In my time at Washington University, I have worked on a number of technical projects, primarily based off of classroom learning.</p>
 
-      <div class="panel panel-default">
-        <div class="panel-body"><strong>Web Development</strong></div>
+      <div class="row  valign-wrapper center-align">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Web Development</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="list-group text-left">
-        <a href="https://github.com/dnweiner/RPDP" class="list-group-item">Resident Program Development Platform (RPDP)<span class="badge">UPCOMING</span></a>
-        <a a href="https://github.com/dnweiner/dannyweiner.me" class="list-group-item">Personal Website<span class="badge">ONGOING</span></a>
-        <a href="https://github.com/dnweiner/madlibs" class="list-group-item">Django + Python Interactive Madlibs Website</a>
-        <a href="https://github.com/dnweiner/coffeesite" class="list-group-item">AngularJS + Bootstrap Coffee Website</a>
-        <a href="https://github.com/dnweiner/chatroom" class="list-group-item">Node.js + Socket.io Chatroom</a>
-        <a href="https://github.com/dnweiner/calendar" class="list-group-item">JavaScript Calendar</a>
-        <a href="/projects/js_calculator.html" class="list-group-item">JavaScript Calculator</a>
-        <a href="/projects/weatherwidget.html" class="list-group-item">AJAX-utilizing Weather Widget</a>
-        <a href="https://github.com/dnweiner/newsSite" class="list-group-item">LAMP Stack News Site</a>
-        <a href="https://github.com/dnweiner/fileSharing" class="list-group-item">PHP File Sharing Site</a>
+      <ul class="collapsible popout left-align" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">Resident Program Development Platform (RPDP) <div class="chip">UPCOMING</div></div>
+          <div class="collapsible-body"><span>A content management system (CMS) that manages Residential Life programs // <a href="https://github.com/JGuyton501/RPDP" target="_blank">GitHub Repo</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">Personal Website<div class="chip">ONGOING</div></div>
+          <div class="collapsible-body"><span>  // <a a href="https://github.com/dnweiner/dannyweiner.me" target="_blank">GitHub Repo</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">Madlibs Site</div>
+          <div class="collapsible-body"><span>Django+Python-based Creative Project, CSE 330S: Rapid Prototyping and Creative Programming   // <a a href="https://github.com/dnweiner/madlibs" target="_blank">GitHub Repo</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">Coffees Site</div>
+          <div class="collapsible-body"><span>AngularJS + Bootstrap // <a href="https://github.com/dnweiner/coffeesite" target="_blank">GitHub Repo</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">Chatroom</div>
+          <div class="collapsible-body"><span>Node.js + Socket.io // <a a href="https://github.com/dnweiner/chatroom" target="_blank">GitHub Repo</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">Calendar</div>
+          <div class="collapsible-body"><span>JavaScript // <a a href="https://github.com/dnweiner/calendar" target="_blank">GitHub Repo</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">Calculator</div>
+          <div class="collapsible-body">
+            <span>Interactive Site // <a a href="../projects/js_calculator.html" target="_blank">Calculate!</a></span>
+            <br>
+            <span>Source Code (JavaScript) // <a href="https://github.com/dnweiner/welcomeToJS" target="_blank">GitHub Repo</a></span>
+           </div>
+        </li>
+        <li>
+          <div class="collapsible-header">Weather Widget</div>
+          <div class="collapsible-body">
+            <span>Interactive Site // <a a href="../projects/weatherwidget.html" target="_blank">What's the weather?</a></span>
+            <br>
+            <span>Source Code (JavaScript) // <a a href="https://github.com/dnweiner/welcomeToJS" target="_blank">GitHub Repo</a></span>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">News Site</div>
+          <div class="collapsible-body"><span>LAMP Stack // <a a href="https://github.com/dnweiner/newsSite" target="_blank">GitHub Repo</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">File Sharing Site</div>
+          <div class="collapsible-body"><span>PHP // <a a href="https://github.com/dnweiner/fileSharing" target="_blank">GitHub Repo</a></span></div>
+        </li>
+      </ul>
+
+      <div class="row  valign-wrapper center-align">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">iOS Mobile Application Development</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="panel panel-default">
-        <div class="panel-body"><strong>iOS Mobile Application Development</strong></div>
+      <ul class="collapsible popout left-align" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">Movie Search Application</div>
+          <div class="collapsible-body"><span>Employs the OMDb API and NSData to allow users to query movies and store favorites. // <a href="https://github.com/dnweiner/movieSearchApp" target="_blank">GitHub Repo</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">Drawing Application</div>
+          <div class="collapsible-body"><span>Bezier Path-based freehand drawing application  // <a a href="https://github.com/dnweiner/drawingApp" target="_blank">GitHub Repo</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">Shopping Calculator</div>
+          <div class="collapsible-body"><span>Introductory Xcode + Swift Project  // <a a href="https://github.com/dnweiner/shoppingCalculator" target="_blank">GitHub Repo</a></span></div>
+        </li>
+      </ul>
+
+      <div class="row  valign-wrapper center-align">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Pythonic Projects</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="list-group text-left">
-        <a href="https://github.com/dnweiner/movieSearchApp" class="list-group-item">Movie Search App</a>
-        <a href="https://github.com/dnweiner/drawingApp" class="list-group-item">Drawing App</a>
-        <a href="https://github.com/dnweiner/shoppingCalculator" class="list-group-item">Shopping Calculator</a>
+      <ul class="collapsible popout left-align" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">CSV Scripts</div>
+          <div class="collapsible-body"><span>Roster Parsing and String Data Manipulation// <a href="https://github.com/dnweiner/rosters" target="_blank">GitHub Repo</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">Batting Average Calculator</div>
+          <div class="collapsible-body"><span>Introductory Python Project  // <a a href="https://github.com/dnweiner/battingAvgCalculator" target="_blank">GitHub Repo</a></span></div>
+        </li>
+      </ul>
+
+      <div class="row  valign-wrapper center-align">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Other Projects</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="panel panel-default">
-        <div class="panel-body"><strong>Pythonic Projects</strong></div>
-      </div>
-
-      <div class="list-group text-left">
-        <a href="https://github.com/dnweiner/rosters" class="list-group-item">Roster Parsing and csv Manipulation Scripts</a>
-        <a href="https://github.com/dnweiner/battingAvgCalculator" class="list-group-item">Batting Average Calculator</a>
-      </div>
-
-      <div class="panel panel-default">
-        <div class="panel-body"><strong>Other Projects</strong></div>
-      </div>
-
-      <div class="list-group text-left">
-        <a href="https://github.com/dnweiner/FiveCardDraw" class="list-group-item">C++ Five Card Draw Poker Emulator</a>
-        <a href="/projects/project_report.pdf" class="list-group-item">Big Data: Sentiment Analysis Using Hive</a>
-      </div>
+      <ul class="collapsible popout left-align" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">Five Card Draw</div>
+          <div class="collapsible-body"><span>C++ Poker Emulator // <a href="https://github.com/dnweiner/FiveCardDraw" target="_blank">GitHub Repo</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">Big Data: Sentiment Analysis Using Hive</div>
+          <div class="collapsible-body"><span>Final Project, CSE 427S: Cloud Computing with Big Data Applications  // <a a href="../projects/project_report.pdf" target="_blank">Project Report PDF</a></span></div>
+        </li>
+      </ul>
 
       <br>
 
       <h2>Writing Samples</h2>
 
-      <div class="panel panel-default">
-        <div class="panel-body"><strong>Technical Writing</strong></div>
+      <div class="row  valign-wrapper center-align">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Technical Writings</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="list-group text-left">
-        <a href="/writingsamples/techwriting/LFR_draft4.pdf" target="_blank" class="list-group-item">Long Formal Report // Beyond: American Identity Intersected with the (Meta)physical Frontier</a>
-        <a a href="/writingsamples/techwriting/WEINER_CableTieOverview_REVISED.pdf" target="_blank" class="list-group-item">Mechanism Description // Cable Ties</a>
-        <a href="/writingsamples/techwriting/How-ToVideoDormLaundry.pdf" target="_blank" class="list-group-item">Instructional Video Screenplay // How-to Laundry</a>
-        <a href="/writingsamples/techwriting/WEINER_GrammarGeek_PARENTHESIS.pdf" target="_blank" class="list-group-item">"Grammar Geek" // Parenthesis Presentation</a>
+      <ul class="collapsible popout left-align" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">Long Formal Report</div>
+          <div class="collapsible-body"><span>"Beyond: American Identity Intersected with the (Meta)physical Frontier" // <a href="../writingsamples/techwriting/LFR_draft4.pdf" target="_blank">PDF</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">Mechanism Description</div>
+          <div class="collapsible-body"><span>Cable Ties Overview // <a a href="../writingsamples/techwriting/WEINER_CableTieOverview_REVISED.pdf" target="_blank">PDF</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">Instructional Video Screenplay</div>
+          <div class="collapsible-body"><span>How-to Dormitory Laundry // <a href="/writingsamples/techwriting/How-ToVideoDormLaundry.pdf" target="_blank">PDF</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">Parenthesis Presentation</div>
+          <div class="collapsible-body"><span>"Grammar Geek" assignment for Technical Writing course // <a href="/writingsamples/techwriting/WEINER_GrammarGeek_PARENTHESIS.pdf" target="_blank">PDF</a></span></div>
+        </li>
+      </ul>
+
+      <div class="row valign-wrapper center-align">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Other Writings</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- <br> -->
-
-      <div class="panel panel-default">
-        <div class="panel-body"><strong>Other Writings</strong></div>
-      </div>
-
-      <div class="list-group text-left">
-        <a href="/writingsamples/PersonalNarrativeFinalDraft.pdf" target="_blank" class="list-group-item">College Writing 1: Personal Narrative</a>
-        <a a href="/writingsamples/ResidentialExperienceWrittenReflection.pdf" target="_blank" class="list-group-item">Resident Advisor Application: Residential Experience Reflection</a>
-        <a href="/writingsamples/OFFICIALSUSenateMinutes-1312017.pdf" target="_blank" class="list-group-item">Student Union: Sample Senate Minutes</a>
-      </div>
-
-      <hr>
+      <ul class="collapsible popout left-align" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">Personal Narrative</div>
+          <div class="collapsible-body"><span>College Writing 1 // <a href="../writingsamples/PersonalNarrativeFinalDraft.pdf" target="_blank">PDF</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">Residential Experience Reflection</div>
+          <div class="collapsible-body"><span>Resident Advisor Application // <a a href="../writingsamples/ResidentialExperienceWrittenReflection.pdf" target="_blank">PDF</a></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header">Sample Senate Minutes</div>
+          <div class="collapsible-body"><span>Student Union Senate // <a href="/writingsamples/OFFICIALSUSenateMinutes-1312017.pdf" target="_blank">PDF</a></span></div>
+        </li>
+      </ul>
 
     </div>
 
     <div class="container">
-        <footer>
-          <p>Designed, built, and maintained by Danny Weiner.</p>
-          <p>Special thanks to Namecheap, GitHub, and Bootstrap, among others.</p>
-        </footer>
-    </div> <!-- /container -->
+
+      <div class="divider"></div>
+
+      <footer class="page-footer">
+        <div class="footer-copyright">
+          <div class="container">
+            <p>Designed, built, and maintained by Danny Weiner.</p>
+            <p>Special thanks to Namecheap, GitHub, and Materialize, among others.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
   </body>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".button-collapse").sideNav();
+      $('.collapsible').collapsible();
+    });
+  </script>
+
 </html>

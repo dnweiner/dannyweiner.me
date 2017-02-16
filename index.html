@@ -11,14 +11,11 @@
     <title>Home - dannyweiner.me</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -35,106 +32,102 @@
         margin-left: 3px;
         margin-right: 3px;
       }
-      .jumbotron {
+      .s12, .card-panel {
         background-color: SteelBlue;
         color: MidnightBlue;
       }
-      .media-right {
-        padding-top: 10px;
-      }
-      .col-md-4 {
+      .s4 {
         color: PowderBlue;
       }
-      .col-md-4 a {
+      .s4 a {
         color: inherit;
       }
-      footer {
-        color: Thistle;
+      nav, footer.page-footer {
+        color: PowderBlue;
+        background-color: LightSlateGrey;
       }
     </style>
   </head>
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <ul class="nav navbar-nav">
-            <li class="active"><a class="navbar-brand" href=".">Home</a><li>
-            <li><a class="navbar-brand" href="/aboutme.html">About Me</a></li>
-            <li><a class="navbar-brand" href="/portfolio.html">Portfolio</a></li>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="left hide-on-med-and-down">
+            <li class="active"><a href=".">Home</a><li>
+            <li><a href="/materialize/aboutme.html">About Me</a></li>
+            <li><a href="/materialize/portfolio.html">Portfolio</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile">
+            <li class="active"><a href=".">Home</a><li>
+            <li><a href="/materialize/aboutme.html">About Me</a></li>
+            <li><a href="/materialize/portfolio.html">Portfolio</a></li>
           </ul>
         </div>
-        <!--<div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div> -->
-        <!--/.navbar-collapse -->
-      </div>
-    </nav>
+      </nav>
+    </div>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <div class="media">
-          <div class="media-body">
-            <h1>"Hello, World!"</h1>
-            <p>Welcome! My name is Danny Weiner, and this is my personal website. Take a look around! I will be updating periodically, so stay tuned for bigger and better things.</p>
-          </div>
-          <div class="media-right">
-              <img class="media-object img-circle" src="images/WEINER_headshot-edited.jpg" alt="Professional Headshot">
+    <div class="container">
+      <div class="col 12">
+        <div class="card-panel hoverable">
+          <div class="row valign-wrapper">
+            <div class="col s8 center-align">
+              <h1>"Hello, World!"</h1>
+              <p>Welcome! My name is Danny Weiner, and this is my personal website. Take a look around! I will be updating periodically, so stay tuned for bigger and better things.</p>
+            </div>
+            <div class="col s4">
+              <img class="circle responsive-img" src="../images/WEINER_headshot-edited.jpg" alt="Professional Headshot">
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <!-- Example row of columns -->
+      <!-- row of columns -->
       <div class="row">
-        <div class="col-md-4">
+        <div class="col s4">
           <a href="/WEINER_Resume.pdf" target=_blank><h2>Resume</h2></a>
-          <p>Includes an overview of my education, skills, and experience. I believe my resume is an accurate representation of my collegiate career, particularly emphasizing the well-rounded approach that has led me to where I am today.</p>
+          <p>Outlines my education, skills, and experience. I believe my resume is an accurate representation of my collegiate career, particularly emphasizing the well-rounded approach that has led me to where I am today.</p>
         </div>
-        <div class="col-md-4">
+        <div class="col s4">
           <a href="/portfolio.html"><h2>Portfolio</h2></a>
           <p>Look through here for a sampling of my previous projects and endeavors, in and out of the classroom. There are links to GitHub repositories containing all of my code, as well as PDFs of some of my writings whilst in college. In time, I will also include previews and descriptions of what I am currently working on.</p>
        </div>
-        <div class="col-md-4">
+        <div class="col s4">
           <h2>Contact Me</h2>
           <p>If you are interested in learning more about me, or any of my projects, please feel free to get in touch! It would be my pleasure to speak with you in greater detail.</p>
           <!-- Single button -->
-          <div class="btn-group">
-            <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Contact Me <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
+          <a class="dropdown-button btn" href="#" data-activates="dropdown1">Contact Me</a>
+            <ul id="dropdown1" class="dropdown-content">
               <li><a href="mailto:dnweiner@wustl.edu">Email</a></li>
               <li><a href="https://www.linkedin.com/in/danny-weiner-59106b110/">LinkedIn</a></li>
               <li><a href="tel:+18477695277">Cell Phone</a></li>
             </ul>
-          </div>
+          </a>
         </div>
       </div>
 
-      <hr>
+      <div class="divider"></div>
 
-      <footer>
-        <p>Designed, built, and maintained by Danny Weiner.</p>
-        <p>Special thanks to Namecheap, GitHub, and Bootstrap, among others.</p>
+      <footer class="page-footer">
+        <div class="footer-copyright">
+          <div class="container">
+            <p>Designed, built, and maintained by Danny Weiner.</p>
+            <p>Special thanks to Namecheap, GitHub, and Materialize, among others.</p>
+          </div>
+        </div>
       </footer>
     </div> <!-- /container -->
+
+    <script type="text/javascript">
+      $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+      });
+    </script>
+
   </body>
 </html>

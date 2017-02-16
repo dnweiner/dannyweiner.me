@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Personal website for Danny Weiner: Portfolio">
+    <meta name="author" content="Danny Weiner">
+
+    <title>Portfolio - dannyweiner.me</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      body {
+        padding-top: 60px;
+        background-color: CadetBlue;
+      }
+      @media (max-width: 979px) {
+        body {
+          padding-top: 0px;
+        }
+      }
+      .nav li {
+        margin-left: 3px;
+        margin-right: 3px;
+      }
+      .container h1, .container h2, .container > p, .panel-body {
+        color: PowderBlue;
+      }
+      #head, #head h1 {
+        background-color: SteelBlue;
+        color: MidnightBlue;
+      }
+      footer {
+        color: Thistle;
+      }
+      strong {
+        font-size: large;
+      }
+      .list-group a {
+        color: MidnightBlue;
+      }
+      .panel, .panel-default, .panel-body, .list-group a {
+        background-color: LightSlateGray;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <ul class="nav navbar-nav">
+            <li><a class="navbar-brand" href=".">Home</a><li>
+            <li><a class="navbar-brand" href="/aboutme.html">About Me</a></li>
+            <li class="active"><a class="navbar-brand" href="/portfolio.html">Portfolio</a></li>
+          </ul>
+        </div>
+        <!--<div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div> -->
+        <!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <div class="container-fluid text-center" id="head">
+      <hr>
+
+      <h1>Portfolio</h1>
+
+      <hr>
+    </div>
+
+    <div class="container text-center">
+      <h2>Technical Projects</h2>
+      <p>In my time at Washington University, I have worked on a number of technical projects, primarily based off of classroom learning.</p>
+
+      <div class="panel panel-default">
+        <div class="panel-body"><strong>Web Development</strong></div>
+      </div>
+
+      <div class="list-group text-left">
+        <a href="https://github.com/dnweiner/RPDP" class="list-group-item">Resident Program Development Platform (RPDP)<span class="badge">UPCOMING</span></a>
+        <a a href="https://github.com/dnweiner/dannyweiner.me" class="list-group-item">Personal Website<span class="badge">ONGOING</span></a>
+        <a href="https://github.com/dnweiner/madlibs" class="list-group-item">Django + Python Interactive Madlibs Website</a>
+        <a href="https://github.com/dnweiner/coffeesite" class="list-group-item">AngularJS + Bootstrap Coffee Website</a>
+        <a href="https://github.com/dnweiner/chatroom" class="list-group-item">Node.js + Socket.io Chatroom</a>
+        <a href="https://github.com/dnweiner/calendar" class="list-group-item">JavaScript Calendar</a>
+        <a href="/projects/js_calculator.html" class="list-group-item">JavaScript Calculator</a>
+        <a href="/projects/weatherwidget.html" class="list-group-item">AJAX-utilizing Weather Widget</a>
+        <a href="https://github.com/dnweiner/newsSite" class="list-group-item">LAMP Stack News Site</a>
+        <a href="https://github.com/dnweiner/fileSharing" class="list-group-item">PHP File Sharing Site</a>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-body"><strong>iOS Mobile Application Development</strong></div>
+      </div>
+
+      <div class="list-group text-left">
+        <a href="https://github.com/dnweiner/movieSearchApp" class="list-group-item">Movie Search App</a>
+        <a href="https://github.com/dnweiner/drawingApp" class="list-group-item">Drawing App</a>
+        <a href="https://github.com/dnweiner/shoppingCalculator" class="list-group-item">Shopping Calculator</a>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-body"><strong>Pythonic Projects</strong></div>
+      </div>
+
+      <div class="list-group text-left">
+        <a href="https://github.com/dnweiner/rosters" class="list-group-item">Roster Parsing and csv Manipulation Scripts</a>
+        <a href="https://github.com/dnweiner/battingAvgCalculator" class="list-group-item">Batting Average Calculator</a>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-body"><strong>Other Projects</strong></div>
+      </div>
+
+      <div class="list-group text-left">
+        <a href="https://github.com/dnweiner/FiveCardDraw" class="list-group-item">C++ Five Card Draw Poker Emulator</a>
+        <a href="/projects/project_report.pdf" class="list-group-item">Big Data: Sentiment Analysis Using Hive</a>
+      </div>
+
+      <br>
+
+      <h2>Writing Samples</h2>
+
+      <div class="panel panel-default">
+        <div class="panel-body"><strong>Technical Writing</strong></div>
+      </div>
+
+      <div class="list-group text-left">
+        <a href="/writingsamples/techwriting/LFR_draft4.pdf" target="_blank" class="list-group-item">Long Formal Report // Beyond: American Identity Intersected with the (Meta)physical Frontier</a>
+        <a a href="/writingsamples/techwriting/WEINER_CableTieOverview_REVISED.pdf" target="_blank" class="list-group-item">Mechanism Description // Cable Ties</a>
+        <a href="/writingsamples/techwriting/How-ToVideoDormLaundry.pdf" target="_blank" class="list-group-item">Instructional Video Screenplay // How-to Laundry</a>
+        <a href="/writingsamples/techwriting/WEINER_GrammarGeek_PARENTHESIS.pdf" target="_blank" class="list-group-item">"Grammar Geek" // Parenthesis Presentation</a>
+      </div>
+
+      <!-- <br> -->
+
+      <div class="panel panel-default">
+        <div class="panel-body"><strong>Other Writings</strong></div>
+      </div>
+
+      <div class="list-group text-left">
+        <a href="/writingsamples/PersonalNarrativeFinalDraft.pdf" target="_blank" class="list-group-item">College Writing 1: Personal Narrative</a>
+        <a a href="/writingsamples/ResidentialExperienceWrittenReflection.pdf" target="_blank" class="list-group-item">Resident Advisor Application: Residential Experience Reflection</a>
+        <a href="/writingsamples/OFFICIALSUSenateMinutes-1312017.pdf" target="_blank" class="list-group-item">Student Union: Sample Senate Minutes</a>
+      </div>
+
+      <hr>
+
+    </div>
+
+    <div class="container">
+        <footer>
+          <p>Designed, built, and maintained by Danny Weiner.</p>
+          <p>Special thanks to Namecheap, GitHub, and Bootstrap, among others.</p>
+        </footer>
+    </div> <!-- /container -->
+  </body>
+</html>
